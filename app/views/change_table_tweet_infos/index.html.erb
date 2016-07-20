@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Change Table Tweet Infos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tweetid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @change_table_tweet_infos.each do |change_table_tweet_info| %>
+      <tr>
+        <td><%= change_table_tweet_info.tweetid %></td>
+        <td><%= link_to 'Show', change_table_tweet_info %></td>
+        <td><%= link_to 'Edit', edit_change_table_tweet_info_path(change_table_tweet_info) %></td>
+        <td><%= link_to 'Destroy', change_table_tweet_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Change Table Tweet Info', new_change_table_tweet_info_path %>

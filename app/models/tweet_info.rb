@@ -1,0 +1,2 @@
+class TweetInfo < ApplicationRecord
+end

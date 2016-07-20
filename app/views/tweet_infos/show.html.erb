@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tweet_info.user %>
+</p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @tweet_info.tweet %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @tweet_info.link %>
+</p>
+
+<p>
+  <strong>Hashtags:</strong>
+  <%= @tweet_info.hashtags %>
+</p>
+
+<p>
+  <strong>Tweetid:</strong>
+  <%= @tweet_info.tweetid %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @tweet_info.photo %>
+</p>
+
+<%= link_to 'Edit', edit_tweet_info_path(@tweet_info) %> |
+<%= link_to 'Back', tweet_infos_path %>
