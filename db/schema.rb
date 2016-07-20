@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718183447) do
+ActiveRecord::Schema.define(version: 20160719160331) do
 
   create_table "bots", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20160718183447) do
 
   create_table "responses", force: :cascade do |t|
     t.string   "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tweet_infos", force: :cascade do |t|
+    t.string   "user"
+    t.string   "tweet"
+    t.string   "link"
+    t.string   "hashtags"
+    t.integer  "tweetid"
+    t.string   "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
