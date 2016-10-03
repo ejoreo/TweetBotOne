@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tweetinfo</th>
+      <th>User</th>
+      <th>Tweet</th>
+      <th>Link</th>
+      <th>Hashtags</th>
+      <th>Tweetid</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @models.each do |model| %>
+      <tr>
+        <td><%= model.TweetInfo %></td>
+        <td><%= model.user %></td>
+        <td><%= model.tweet %></td>
+        <td><%= model.link %></td>
+        <td><%= model.hashtags %></td>
+        <td><%= model.tweetid %></td>
+        <td><%= model.photo %></td>
+        <td><%= link_to 'Show', model %></td>
+        <td><%= link_to 'Edit', edit_model_path(model) %></td>
+        <td><%= link_to 'Destroy', model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Model', new_model_path %>

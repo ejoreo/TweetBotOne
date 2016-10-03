@@ -10,6 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160720015924) do
+
+  create_table "bots", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "responses", force: :cascade do |t|
+    t.string   "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tweet_deets", force: :cascade do |t|
+    t.string "user"
+    t.string "tweet"
+    t.string "link"
+    t.string "hashtags"
+    t.string "photo"
+    t.string "tweetid"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "tweet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
